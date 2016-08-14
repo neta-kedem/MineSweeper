@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Mine Sweeper</title>
+    <meta charset="utf-8" />
+    <!-- importiing bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="init()" class="noselect">
+
+    <h1>MineSweeper</h1>
+    <div class="table" oncontextmenu="return false"></div>
+
+    <div class="time">
+        <label id="minutes">00</label> :
+        <label id="seconds">00</label>
+    </div>
+
+    <button type="button" onclick="init()" class="btn btn-primary" >Restart</button>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Board Size</span>
+      <input type="text" class="form-control" placeholder="8" aria-describedby="basic-addon1" onchange="newBoardSize(this)">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">Number of Mines</span>
+      <input type="text" class="form-control" placeholder="5" aria-describedby="basic-addon1" onchange="newMinesCount(this)">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+
+</html>
